@@ -8,7 +8,7 @@ import telran.net.TcpServer;
 public class CompanyServerAppl {
 
 	private static final String FILE_NAME = "employeesTest.data";
-	private static final int PORT = 5000;
+	private static final int PORT = 5001;
 
 	public static void main(String[] args) {
 		
