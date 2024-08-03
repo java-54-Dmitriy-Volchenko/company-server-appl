@@ -37,7 +37,9 @@ import static telran.net.TcpConfigurationProperties.*
 				String line = scanner.nextLine();
 				if (line != null && line.equals(SHUTDOWN)) {
 					running = false;
-					tcpServer.shutdown();
+					tcpServer.shutdown();//I don't understand why it is  necessary to change this class code. 
+										//Method tspServer.shutdown calls executorService.shutdown() 
+										//and has to stop all threads from  queue correctly
 					if (persistable != null) {
 						persistable.save(FILE_NAME);
 					}
